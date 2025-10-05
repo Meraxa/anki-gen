@@ -33,18 +33,18 @@ class BaseLearningItemModel(BaseModel):
         description="The learning item in the learning language.",
         examples=["the house"],
     )
-    base_item_audio_id: str = Field(
+    base_item_audio_id: int = Field(
         ...,
         description="The ID of the audios that pronounce the base item.",
-        examples=["658eb49d41d98125d5ad2b82"],
+        examples=["658eb49d41d98125d5ad2b82"],  # FIXME: should be int
     )
-    target_item_audio_id: str = Field(
+    target_item_audio_id: int = Field(
         ...,
         description="The ID of the audios that pronounce the target item.",
-        examples=["658eb49d41d98125d5ad2b82"],
+        examples=["658eb49d41d98125d5ad2b82"],  # FIXME: should be int
     )
-    image_id: str = Field(
+    image_id: int = Field(
         ...,
         description="The ID of the images that represent this sentence.",
-        examples=["658eb49d41d98125d5ad2b82"],
+        examples=["658eb49d41d98125d5ad2b82"],  # FIXME: should be int
     )
